@@ -37,7 +37,7 @@ export default function SearchMovies() {
         </button>
       </form>
       <div className="card-list">
-        {movies.map((movie) => (
+        {movies.filter(movie => movie.poster_path).map((movie) => (
           <div className="card" key={movie.id}>
             <img
               className="card--image"
